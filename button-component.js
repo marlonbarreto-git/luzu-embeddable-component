@@ -20,7 +20,7 @@ const setOrganizationCode = paymentData =>  {
     window.luzuOnClick = () => {
         document.getElementById('luzu-error-msj')?.remove();
 
-        fetch('https://luzu.herokuapp.com/create-transaction', {
+        fetch('https://luzu-api.herokuapp.com/create-transaction', {
             method: 'POST',
             body: JSON.stringify(paymentData),
             headers: {
