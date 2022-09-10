@@ -26,7 +26,10 @@ const setOrganizationCode = paymentData =>  {
             headers: {
                 'Content-Type': 'application/json'
             },  
-        }).then(response => window.open(`https://luzu-fe.vercel.app/authenticate/${response.data}`))
+        }).then(response => {
+            console.log(response)
+            window.open(`https://luzu-fe.vercel.app/authenticate/${response.data}`)
+        })
         .catch(error => {
             const errorMsj = document.createElement('span');
     
